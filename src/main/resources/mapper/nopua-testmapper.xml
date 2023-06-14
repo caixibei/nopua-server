@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.spring.nopua.test.mapper.TestMapper">
+
+    <!--查询数据库所有数据-->
+    <select id="selectAll" resultType="io.spring.nopua.test.pojo.Test">
+        select id,
+            date,
+            text
+        from sys_test
+    </select>
+
+</mapper>
