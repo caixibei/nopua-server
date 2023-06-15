@@ -15,4 +15,5 @@ public class TestController {
     public @ResponseBody List<Test> selectAll(){
         return testService.selectAll();
     }
+
 }
