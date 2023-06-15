@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 @RestController("test")
 public class TestController {
+
     @Autowired
     private TestService testService;
 
