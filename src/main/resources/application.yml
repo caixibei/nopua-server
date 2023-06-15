@@ -2,11 +2,11 @@ server:
   port: @server.port@
 
 mybatis:
-  mapper-locations: classpath:/resources/mapper/*-*mapper.xml
+  mapper-locations: classpath:/mapper/*mapper.xml
 
 spring:
   datasource:
     driver-class-name: @driver@
-    url: @url@
     username: @username@
     password: @password@
+    url: @jdbcUrl@

@@ -77,7 +77,7 @@
 			<properties>
 				<server.port>8080</server.port>
 				<driver>com.mysql.cj.jdbc.Driver</driver>
-				<url>jdbc:mysql://localhost:3306/nopua-server</url>
+				<jdbcUrl>jdbc:mysql://localhost:3306/nopua-server</jdbcUrl>
 				<username>root</username>
 				<password>NJI(mko0</password>
 			</properties>
