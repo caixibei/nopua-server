@@ -8,6 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class NopuaServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(NopuaServerApplication.class, args);
+        SpringApplication.run(NopuaServerApplication.class,args);
     }
 }
