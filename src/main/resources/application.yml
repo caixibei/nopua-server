@@ -1,11 +1,8 @@
+# server configuration
 server:
   port: @server.port@
-
-mybatis:
-  mapper-locations: classpath:/mapper/*mapper.xml
-
+# base configuration
 spring:
-
   application:
     name: no-pua-admin
   datasource:
@@ -14,7 +11,13 @@ spring:
     password: @password@
     url: @jdbcUrl@
 
-# swagger
+# mybatis configuration
+mybatis:
+  mapper-locations: classpath:/mapper/*mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# springdoc configuration
 springdoc:
   api-docs:
     enabled: true
@@ -27,4 +30,3 @@ springdoc:
     disable-swagger-default-url: true
   packages-to-scan: io.spring.nopua
   paths-to-match: /*
-
