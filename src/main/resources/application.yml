@@ -5,6 +5,9 @@ mybatis:
   mapper-locations: classpath:/mapper/*mapper.xml
 
 spring:
+
+  application:
+    name: no-pua-admin
   datasource:
     driver-class-name: @driver@
     username: @username@

@@ -8,9 +8,23 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
 /__________)                                        (__________\
 
 ${AnsiColor.BLUE}
-============================================================
+================================Project Info ===============================
 ${AnsiColor.BRIGHT_WHITE}
+Project Name: ${spring.application.name}
 Spring Boot Version:  ${spring-boot.version}
-Swagger document path: http://localhost:${server.port}${springdoc.swagger-ui.path}
+SpringDoc document path: http://localhost:${server.port}${springdoc.swagger-ui.path}
+Source address: https://github.com/caixibei/nopua-server.git
+Front end source code: https://github.com/caixibei/vue2-nopua-admin.git
 ${AnsiColor.BLUE}
-============================================================
+============================================================================
+${AnsiColor.BRIGHT_GREEN}
+============================== Developer Info ==============================
+${AnsiColor.BRIGHT_WHITE}
+Author: Cai Xi bei
+Email: caixibei@139.com
+Phone: 188****7162
+Age: 18 (do you believe?)
+QQ: 2584163016
+Wechat: (same as phone?)
+${AnsiColor.BRIGHT_GREEN}
+============================================================================
