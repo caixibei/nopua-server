@@ -25,7 +25,6 @@ public class SpringDocConfig {
 
     @Bean
     public OpenAPI customOpenAPI() {
-        log.debug("启用Swagger文档中,请稍后...");
         return new OpenAPI().components(new Components()).
                 info(new Info()
                         .title(title)
