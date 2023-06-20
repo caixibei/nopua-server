@@ -10,3 +10,18 @@ spring:
     username: @username@
     password: @password@
     url: @jdbcUrl@
+
+# swagger
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api
+  swagger-ui:
+    path: /v3/api-docs
+    tagsSorter: alpha
+    use-root-path: true
+    enabled: true
+    disable-swagger-default-url: true
+  packages-to-scan: io.spring.nopua
+  paths-to-match: /*
+

@@ -57,12 +57,28 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+			<version>2.1.0</version>
+		</dependency>
 	</dependencies>
 
+	<!--开发人员信息-->
 	<developers>
 		<developer>
 			<email>caixibei@139.com</email>
-			<name>caixibei</name>
+			<name>蔡熙贝</name>
+			<url>https://gitee.com/caixibei</url>
+		</developer>
+		<developer>
+			<email>caixibei@139.com</email>
+			<name>张钧浩</name>
 			<url>https://gitee.com/caixibei</url>
 		</developer>
 	</developers>
@@ -75,18 +91,23 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
+				<!--基础配置-->
 				<server.port>8080</server.port>
 				<driver>com.mysql.cj.jdbc.Driver</driver>
 				<jdbcUrl>jdbc:mysql://localhost:3306/nopua-server</jdbcUrl>
 				<username>root</username>
 				<password>NJI(mko0</password>
+				<!--文档配置-->
+				<springdoc.api-path>/v3/api-docs</springdoc.api-path>
+				<springdoc.ui-path>/swagger-ui.html</springdoc.ui-path>
+				<springdoc.packages>io.spring.nopua</springdoc.packages>
 			</properties>
 		</profile>
 		<!--生产环境-->
 		<profile>
 			<id>proc</id>
 			<properties>
-				<server.port>80</server.port>
+				<server.port>9999</server.port>
 			</properties>
 		</profile>
 	</profiles>
@@ -114,5 +135,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
