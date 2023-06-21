@@ -133,7 +133,7 @@
 				<driver>com.mysql.cj.jdbc.Driver</driver>
 				<jdbcUrl>jdbc:mysql://localhost:3306/nopua-server</jdbcUrl>
 				<username>root</username>
-				<password>NJI(mko0</password>
+				<password>root</password>
 				<!--文档配置-->
 				<springdoc.enabled>true</springdoc.enabled>
 				<springdoc.api-path>/v3/api</springdoc.api-path>
