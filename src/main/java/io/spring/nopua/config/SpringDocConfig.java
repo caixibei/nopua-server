@@ -6,6 +6,7 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import lombok.extern.slf4j.Slf4j;
+import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 @Slf4j
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class SpringDocConfig {
 
     private final static String developer = "蔡熙贝";
+
     private final static String version = "v1.0";
 
     private final static String title= "NoPua-Admin API";
@@ -24,7 +26,7 @@ public class SpringDocConfig {
     private final static String url = "https://gitee.com/caixibei/";
 
     @Bean
-    public OpenAPI customOpenAPI() {
+    public OpenAPI openAPI() {
         return new OpenAPI().components(new Components()).
                 info(new Info()
                         .title(title)
@@ -35,5 +37,26 @@ public class SpringDocConfig {
                                 .name(license)
                                 .url(url)))
                 .externalDocs(new ExternalDocumentation());
+    }
+
+    @Bean
+    public GroupedOpenApi testApi() {
+        return GroupedOpenApi.builder()
+                .group("test")
+                .displayName("测试环境")
+                .pathsToMatch("/**")
+                .packagesToScan("io.spring.nopua.test")
+                .build();
+    }
+
+    @Bean
+    public GroupedOpenApi devApi() {
+        return GroupedOpenApi.builder()
+                .group("dev")
+                .displayName("开发环境")
+                .pathsToMatch("/**")
+                .packagesToScan("io.spring.nopua")
+                .packagesToExclude("io.spring.nopua.test")
+                .build();
     }
 }
