@@ -29,5 +29,6 @@ springdoc:
     use-root-path: true
     enabled: true
     disable-swagger-default-url: true
-  packages-to-scan: @springdoc.packages@
-  paths-to-match: @spring.match-path@
+  # if you have groups, please exclude this configuration.
+  #packages-to-scan: @springdoc.packages@
+  #paths-to-match: @spring.match-path@
