@@ -15,7 +15,7 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/*mapper.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
 
 # springdoc configuration
 springdoc:
