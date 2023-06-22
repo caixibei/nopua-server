@@ -148,16 +148,20 @@
 		<!--生产环境-->
 		<profile>
 			<id>proc</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
 			<properties>
 				<!--基础配置-->
-				<server.port>8080</server.port>
+				<server.port>9999</server.port>
 				<driver>com.mysql.cj.jdbc.Driver</driver>
 				<jdbcUrl>jdbc:mysql://localhost:3306/nopua-server</jdbcUrl>
 				<username>root</username>
 				<password>NJI(mko0</password>
 				<!--文档配置-->
-				<springdoc.api-path>/v3/api-docs</springdoc.api-path>
-				<springdoc.ui-path>/swagger-ui.html</springdoc.ui-path>
+				<springdoc.enabled>false</springdoc.enabled>
+				<springdoc.api-path>/v3/api</springdoc.api-path>
+				<springdoc.ui-path>/v3/api-docs</springdoc.ui-path>
 				<springdoc.packages>io.spring.nopua</springdoc.packages>
 				<spring.match-path>/*</spring.match-path>
 				<!--日志配置-->
