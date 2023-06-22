@@ -1,6 +1,7 @@
 # server configuration
 server:
   port: @server.port@
+
 # base configuration
 spring:
   application:
@@ -15,18 +16,18 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/*mapper.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
+    log-impl: @mybatis.log-impl@
 
 # springdoc configuration
 springdoc:
   api-docs:
-    enabled: true
-    path: /v3/api
+    enabled: @springdoc.enabled@
+    path: @springdoc.api-path@
   swagger-ui:
-    path: /v3/api-docs
+    path: @springdoc.ui-path@
     tagsSorter: alpha
     use-root-path: true
     enabled: true
     disable-swagger-default-url: true
-  #packages-to-scan: io.spring.nopua
-  #paths-to-match: /*
+  packages-to-scan: @springdoc.packages@
+  paths-to-match: @spring.match-path@

@@ -135,11 +135,14 @@
 				<username>root</username>
 				<password>NJI(mko0</password>
 				<!--文档配置-->
-				<springdoc.api-path>/v3/api-docs</springdoc.api-path>
-				<springdoc.ui-path>/swagger-ui.html</springdoc.ui-path>
+				<springdoc.enabled>true</springdoc.enabled>
+				<springdoc.api-path>/v3/api</springdoc.api-path>
+				<springdoc.ui-path>/v3/api-docs</springdoc.ui-path>
 				<springdoc.packages>io.spring.nopua</springdoc.packages>
+				<spring.match-path>/*</spring.match-path>
 				<!--日志配置-->
 				<log_title>No-Pua-Admin Log</log_title>
+				<mybatis.log-impl>org.apache.ibatis.logging.stdout.StdOutImpl</mybatis.log-impl>
 			</properties>
 		</profile>
 		<!--生产环境-->
@@ -156,8 +159,10 @@
 				<springdoc.api-path>/v3/api-docs</springdoc.api-path>
 				<springdoc.ui-path>/swagger-ui.html</springdoc.ui-path>
 				<springdoc.packages>io.spring.nopua</springdoc.packages>
+				<spring.match-path>/*</spring.match-path>
 				<!--日志配置-->
 				<log_title>No-Pua-Admin Log</log_title>
+				<mybatis.log-impl>org.apache.ibatis.logging.log4j.Log4jImpl</mybatis.log-impl>
 			</properties>
 		</profile>
 	</profiles>
