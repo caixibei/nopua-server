@@ -138,13 +138,26 @@
 				<springdoc.api-path>/v3/api-docs</springdoc.api-path>
 				<springdoc.ui-path>/swagger-ui.html</springdoc.ui-path>
 				<springdoc.packages>io.spring.nopua</springdoc.packages>
+				<!--日志配置-->
+				<log_title>No-Pua-Admin Log</log_title>
 			</properties>
 		</profile>
 		<!--生产环境-->
 		<profile>
 			<id>proc</id>
 			<properties>
-				<server.port>9999</server.port>
+				<!--基础配置-->
+				<server.port>8080</server.port>
+				<driver>com.mysql.cj.jdbc.Driver</driver>
+				<jdbcUrl>jdbc:mysql://localhost:3306/nopua-server</jdbcUrl>
+				<username>root</username>
+				<password>NJI(mko0</password>
+				<!--文档配置-->
+				<springdoc.api-path>/v3/api-docs</springdoc.api-path>
+				<springdoc.ui-path>/swagger-ui.html</springdoc.ui-path>
+				<springdoc.packages>io.spring.nopua</springdoc.packages>
+				<!--日志配置-->
+				<log_title>No-Pua-Admin Log</log_title>
 			</properties>
 		</profile>
 	</profiles>
